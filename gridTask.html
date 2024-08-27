@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .main
+            {
+                grid-template-rows: 50px 30px 300px 50px;
+                display: grid;
+                grid-row-gap: 10px;
+            }
+            .header, .footer
+            {
+                background-color: coral;
+            }
+            
+            .nav
+            {
+                background-color: coral;
+                display: grid;
+                grid-template-columns:1fr 1fr;
+                justify-content: end;
+                
+            }
+            .nav-content
+            {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                justify-content: center;
+                align-items: center;
+                grid-gap: 10px;
+            }
+
+            .nav-item
+            {
+                border: 1px solid black;
+                background-color: yellowgreen;
+                height: 14px;
+            }
+            
+            .center-part
+            {
+                grid-template-columns: 2fr 1fr;
+                display: grid;
+                grid-column-gap: 10px;
+            }
+
+            .article ,.aside
+            {   
+                
+                background-color: rgb(80, 112, 255);
+                display: grid;
+                grid-template-rows: 1fr 2fr;
+            }
+
+            .article-content,  .aside-content
+            {
+                display: grid;
+                align-items: center;
+                justify-items: center;
+            }
+           
+            .aside
+            {
+                background-color: rgb(160, 163, 177);
+            }
+           
+            
+            .article-item, .aside-item
+            {
+                border: 1px solid black;
+                background-color: rgb(8, 169, 169);
+                height: 24px;
+                width: 50%;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <div class="main">
+            <div class ="header">
+            </div>
+
+            <div class="nav">
+                <div class ="nav-content"></div>
+                <div class ="nav-content">
+                    <div class="nav-item">
+                    </div>
+
+                    <div class="nav-item">
+                    </div>
+
+                    <div class="nav-item">
+                    </div>
+
+                    <div class="nav-item">
+                    </div>
+
+                </div>
+            </div>
+            <div class = "center-part">
+                <div class="article">
+                    <div class="article-content"></div>
+                    <div class="article-content">
+                        
+                        <div class="article-item">
+
+                        </div>
+                        <div class="article-item">
+
+                        </div>
+                        <div class="article-item">
+
+                        </div>
+                    </div>
+                </div>
+                <div  class="aside">
+                    <div class= "aside-content"></div>
+                    <div class= "aside-content">
+                        <div  class="aside-item">
+
+                        </div>
+                        <div class="aside-item">
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer">
+        </div>       
+        </div>
+    </body>
+</html>
