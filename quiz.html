@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid Test</title>
+        <style>
+            .container
+            {
+                border:1px solid black ;
+                background-color: aqua;
+                display: flex;
+                flex-direction: column;
+                height: 210px;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                
+            }
+            .g-item
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                background-color: rgb(47, 152, 152);
+                height: 50px;
+                flex-basis: auto;
+
+            }
+            .inner1,.inner3,.inner5,.inner7
+            {
+                height: 100%;
+                background-color: brown;
+                flex-grow: 2;
+            }
+            .inner2,.inner4,.inner6,.inner8
+            {
+                flex-grow: 1;
+                height: 100%;
+                background-color: rgb(214, 131, 131);
+              
+            }
+            .inner3{
+                flex-grow: 1;
+            }
+            .inner4{
+                flex-grow: 1;
+               
+            }
+            .inner5{
+                flex-grow: 4;
+            }
+            .inner6{
+                flex-grow:1 ;
+            }
+            .inner7{
+                flex-grow: 4;
+            }
+            .inner8{
+                flex-grow: 3;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="g-item">
+                <div class="inner1"></div>
+                <div class="inner2"></div>
+            </div>
+            <div class="g-item">https://github.com/wajdiaw/Assignments/tree/main
+                <div class="inner3"></div>
+                <div class="inner4"></div>
+            </div>
+            <div class="g-item">
+                <div class="inner5"></div>
+                <div class="inner6"></div>
+            </div>
+            <div class="g-item">
+                <div class="inner7"></div>
+                <div class="inner8"></div>
+            </div>
+     
+        </div>
+
+    </body>
+</html>
