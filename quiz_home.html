@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid 2</title>
+
+        <style>
+            .container{
+                display: grid;
+                grid-template-rows: 3px 100px 100px 100px 100px 3px;
+                background-color: brown;
+                grid-row-gap: 3px;
+            }
+
+            .row1,.row2,.row3,.row4
+            {
+                display: grid;
+                grid-column-gap: 3px;
+                flex-direction: row;
+                
+            }
+            .row1{
+                grid-template-columns: 3px 3fr 1fr 3px ;
+            }
+            .row2{
+                grid-template-columns: 3px 1fr 1fr 3px ;
+            }
+            .row3{
+                grid-template-columns:3px 6fr 1fr 3px;
+            }
+            .row4{
+                grid-template-columns:3px 2fr 1fr 3px;
+            }
+            .el
+            {
+                background-color: rgb(105, 16, 50);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div></div>
+            <div class="row1">
+                <div></div>
+                <div class="el"></div>
+                <div class="el"></div>
+                <div></div>
+            </div>
+            
+            <div class="row2">
+                <div></div>
+                <div class="el"></div>
+                <div class="el"></div>
+                <div></div>
+            </div>
+            
+            <div class="row3">
+                <div></div>
+                <div class="el"></div>
+                <div class="el"></div>
+                <div></div>
+            </div>
+
+            <div class="row4">
+                <div></div>
+                <div class="el"></div>
+                <div class="el"></div>
+                <div></div>
+            </div>
+            <div></div>
+        </div>
+    </body>
+</html>
