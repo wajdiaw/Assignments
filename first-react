@@ -1,0 +1,80 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+function App() {
+  const [count, setCount] = useState(0)
+  function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+const validateForom = ()=>{
+    if(validateEmail(document.getElementById("email").value))
+    {
+        if(document.getElementById("phone").value !="")
+        {
+            alert("thanks for providing details, we'll contact soon!")
+        }
+        else
+        {
+            alert('fill a correct phone')
+        }
+    }
+    else{
+        alert('fill a correct email')
+    }
+
+}
+  return (
+    <>
+    <div>
+      <h1 id = "contactM">Contact me:</h1>
+      <form type="POST">
+                <ul>
+                    <li>
+                        <label for ="fname">First Name:</label>
+                        <input type="text" id="fname"></input>
+                    </li>
+                    <li>
+                        <label for ="lname">Last Name:</label>
+                        <input type="text" id="lname"></input>
+                    </li>
+                    <li>
+                        <label for ="email">Email:</label>
+                        <input type="text" id="email"></input>
+                    </li>
+                    <li>
+                        <label for ="phone">Phone Number:</label>
+                        <input type="tel" id="phone"></input>
+                    </li>
+                    <li>
+                        <label for ="country">Country:</label>
+                        <select name="country" id="country">
+                            <option value ="UAE">UAE</option>
+                            <option value ="KSA">KSA</option>
+                            <option value ="Kuwait">Kuwait</option>
+                            <option value ="Oman">Oman</option>
+                            <option value ="Bahrain">Bahrain</option>
+                            <option value ="Qatar">Qatar</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for ="avl-hours">Available Hours:</label>
+                        <input type="text" id="avl-hours"></input>
+                    </li>
+                    <li>
+                        <label for ="description">Description:</label>
+                        <textarea id="description" name="description" row="4" cols="50"></textarea>
+                    </li>
+
+                    <input onClick = {validateForom()}  type="submit"></input>
+                </ul>
+            </form>
+    </div>
+    </>
+  )
+}
+
+export default App
