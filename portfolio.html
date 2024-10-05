@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wajdi's CV</title>
+        <link rel="stylesheet" href="css.css">
+       
+    </head>
+    <body>
+        <div class="header">
+            <h1 style="text-align: center;">
+                Wajdi Aweida
+            </h1>
+            <div class="details">
+                <ul>
+                    <li>0543771858</li>
+                    <li>wajdi.aweida@gmail.com</li>
+                    <li><a href="https://www.linkedin.com/in/wajdyw" title="Go to my profile">Linkedin</a></li>
+                    <button onclick="funFact()">Try To click!</button>
+                </ul>
+                <div class="photo-sec">
+                    <img src ="thispersondoesnotexist.jpg" width="100">
+                </div>
+                
+            </div>
+
+            
+        </div>
+        <div>
+            
+        </div>
+            
+        <h1 id = "workx">Work Experience</h1>
+        
+        <ul>
+            <li style="list-style-type: circle;"><span>2019 - NOW: </span> Freelancer</li>
+            <li style="list-style-type: circle;"><span>2015- 2019: </span>Digital Marketing Specialist</li>
+        </ul>
+        <div>
+            <p id="funny"></p>
+        </div>
+        <div>
+            <h1 id = "contactM">Contact me:</h1>
+            <form type="POST">
+                <ul>
+                    <li>
+                        <label for ="fname">First Name:</label>
+                        <input type="text" id="fname">
+                    </li>
+                    <li>
+                        <label for ="lname">Last Name:</label>
+                        <input type="text" id="lname">
+                    </li>
+                    <li>
+                        <label for ="email">Email:</label>
+                        <input type="text" id="email">
+                    </li>
+                    <li>
+                        <label for ="phone">Phone Number:</label>
+                        <input type="tel" id="phone">
+                    </li>
+                    <li>
+                        <label for ="country">Country:</label>
+                        <select name="country" id="country">
+                            <option value ="UAE">UAE</option>
+                            <option value ="KSA">KSA</option>
+                            <option value ="Kuwait">Kuwait</option>
+                            <option value ="Oman">Oman</option>
+                            <option value ="Bahrain">Bahrain</option>
+                            <option value ="Qatar">Qatar</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for ="avl-hours">Available Hours:</label>
+                        <input type="text" id="avl-hours">
+                    </li>
+                    <li>
+                        <label for ="description">Description:</label>
+                        <textarea id="description" name="description" row="4" cols="50"></textarea>
+                    </li>
+
+                    <input onclick = "validateForom()"  type="submit">
+                </ul>
+            </form>
+        </div>
+        <script>
+            let hoveredElm = document.getElementById("workx");
+            hoveredElm.addEventListener("mouseover",(event)=>{
+                hoveredElm.style.backgroundColor ="red";
+                setTimeout(() => {hoveredElm.style.backgroundColor = 'white';
+                
+            }, 3000);
+            });
+            
+            const funFact = ()=>{
+                let fun = document.getElementById("funny");
+                fun.innerHTML = "<h1> Funny fact abount me: I like Icecream!</h1>"
+            }
+
+            function validateEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            const validateForom = ()=>{
+                if(validateEmail(document.getElementById("email").value))
+                {
+                    if(document.getElementById("phone").value !="")
+                    {
+                        alert("thanks for providing details, we'll contact soon!")
+                    }
+                    else
+                    {
+                        alert('fill a correct phone')
+                    }
+                }
+                else{
+                    alert('fill a correct email')
+                }
+
+            }
+
+            const toggleVisibility = ()=>{
+
+            }
+        </script>
+    </body>
+</html>
